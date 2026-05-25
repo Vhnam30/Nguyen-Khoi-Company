@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import styles from './DefaultLayout.module.scss';
 import PropTypes from 'prop-types';
 import Header from '../components/Header/index.js';
@@ -14,7 +14,7 @@ function DefaultLayout({ children }) {
       <Footer />
     </div>
   );
-}
+} 
 
 //PropTypes
 DefaultLayout.propTypes = {
