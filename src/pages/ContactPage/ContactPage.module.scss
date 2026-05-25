@@ -6,7 +6,10 @@
 
 .contactBanner {
   height: 380px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('') center/cover;
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.6), 
+  rgba(0, 0, 0, 0.6)
+) center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
