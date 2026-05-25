@@ -5,7 +5,7 @@ import ProductPage from '../pages/ProductPage/index.js';
 import ContactPage from '../pages/ContactPage/index.js';
 import AboutPage from '../pages/AboutPage/index.js';
 import ServicesPage from '../pages/ServicesPage/index.js';
-import ProjectPage from '../pages/ProjectPage/index.js';
+// import ProjectPage from '../pages/ProjectPage/index.js';
 
 const publicRoutes = [
     {path: config.routes.home, component: HomePage},
