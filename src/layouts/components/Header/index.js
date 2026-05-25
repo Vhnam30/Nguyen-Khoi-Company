@@ -2,19 +2,15 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import routes from "../../../config/routes";
 import styles from "./Header.module.scss";
+import { logo } from "../../../assets/img/logo/index.js";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Xử lý scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 60) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 60);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,7 +21,7 @@ function Header() {
     { title: "Trang chủ", path: routes.home },
     { title: "Sản phẩm", path: routes.product },
     { title: "Dịch vụ", path: routes.services },
-    { title: "Dự án nổi bật", path: routes.project },
+    // { title: "Dự án nổi bật", path: routes.project },
     { title: "Về chúng tôi", path: routes.aboutus },
     { title: "Liên hệ", path: routes.contact },
   ];
@@ -37,8 +33,8 @@ function Header() {
         <div className={styles.header__logo}>
           <Link to={routes.home}>
             <img 
-              src="" 
-              alt="Vật Liệu Xây Dựng Logo" 
+              src={logo} 
+              alt="Nguyễn Khôi Company" 
               className={styles.header__logoImg}
             />
           </Link>
@@ -57,11 +53,11 @@ function Header() {
           </ul>
         </nav>
 
-        {/* Contact Button */}
+        {/* Hotline Button */}
         <div className={styles.header__action}>
-          <Link to={routes.contact} className={styles.header__btn}>
-            Liên hệ ngay
-          </Link>
+          <a href="tel:0941770995" className={styles.header__btn}>
+            📞 0941.770.995
+          </a>
         </div>
 
         {/* Hamburger Menu */}
@@ -90,13 +86,13 @@ function Header() {
             </li>
           ))}
           <li>
-            <Link 
-              to={routes.contact} 
+            <a 
+              href="tel:0941770995"
               onClick={() => setIsMenuOpen(false)}
               className={styles.header__mobileBtn}
             >
-              Liên hệ ngay
-            </Link>
+              📞 Gọi ngay: 0941.770.995
+            </a>
           </li>
         </ul>
       </div>

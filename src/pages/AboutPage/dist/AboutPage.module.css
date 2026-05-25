@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -7,7 +8,7 @@
 /* Banner */
 .aboutBanner {
   height: 420px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('') center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,17 +30,16 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary);
-  }
+}
+.sectionTitle:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
 }
 
 /* Giới thiệu */
@@ -63,14 +63,13 @@
   background: white;
   padding: 3rem 2.5rem;
   border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
-
-  h3 {
-    font-size: 2.6rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-  }
+}
+.missionCard h3 {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 /* Giá trị cốt lõi */
@@ -98,14 +97,13 @@
   background: white;
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
   text-align: center;
-
-  h4 {
-    font-size: 2.1rem;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-  }
+}
+.whyCard h4 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 /* CTA */
@@ -116,16 +114,14 @@
   color: white;
   border-radius: 16px;
   margin: 80px 0;
-
-  h2 {
-    font-size: 3.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-size: 2.1rem;
-    margin-bottom: 3rem;
-  }
+}
+.cta h2 {
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
+}
+.cta p {
+  font-size: 2.1rem;
+  margin-bottom: 3rem;
 }
 
 .ctaBtn {
@@ -138,10 +134,9 @@
   font-weight: 700;
   text-decoration: none;
   transition: all 0.4s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+}
+.ctaBtn:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive */

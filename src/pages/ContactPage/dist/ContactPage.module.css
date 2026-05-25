@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,7 +7,7 @@
 
 .contactBanner {
   height: 380px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('') center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,42 +39,37 @@
 .infoItem {
   margin-bottom: 2.2rem;
   font-size: 1.7rem;
-
-  strong {
-    display: block;
-    margin-bottom: 0.6rem;
-    color: var(--primary);
-  }
-
-  a {
-    color: var(--text-color);
-    text-decoration: none;
-  }
+}
+.infoItem strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+}
+.infoItem a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 /* Form */
 .formGroup {
   margin-bottom: 1.8rem;
-
-  input, textarea {
-    width: 100%;
-    padding: 1.4rem 1.8rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1.65rem;
-    transition: all 0.3s;
-
-    &:focus {
-      border-color: var(--primary);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(165, 207, 81, 0.15);
-    }
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 140px;
-  }
+}
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  padding: 1.4rem 1.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.65rem;
+  transition: all 0.3s;
+}
+.formGroup input:focus, .formGroup textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(165, 207, 81, 0.15);
+}
+.formGroup textarea {
+  resize: vertical;
+  min-height: 140px;
 }
 
 .submitBtn {
@@ -87,16 +83,14 @@
   cursor: pointer;
   width: 100%;
   transition: all 0.3s;
-
-  &:hover {
-    background: #8fb743;
-    transform: translateY(-3px);
-  }
-
-  &:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
+}
+.submitBtn:hover {
+  background: #8fb743;
+  transform: translateY(-3px);
+}
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .status {

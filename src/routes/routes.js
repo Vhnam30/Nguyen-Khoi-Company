@@ -13,7 +13,7 @@ const publicRoutes = [
     {path: config.routes.contact, component: ContactPage},
     {path: config.routes.aboutus, component: AboutPage},
     {path: config.routes.services, component: ServicesPage},
-    {path: config.routes.project, component: ProjectPage}
+    // {path: config.routes.project, component: ProjectPage}
 ];
 
 export {publicRoutes};

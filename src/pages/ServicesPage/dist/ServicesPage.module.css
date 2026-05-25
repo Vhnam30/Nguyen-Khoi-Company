@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -7,7 +8,7 @@
 /* Banner */
 .serviceBanner {
   height: 420px;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,17 +35,16 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary);
-  }
+}
+.sectionTitle:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
 }
 
 /* Grid Dịch Vụ */
@@ -65,11 +65,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-
-  &:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(165, 207, 81, 0.25);
-  }
+}
+.serviceCard:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(165, 207, 81, 0.25);
 }
 
 .serviceIcon {
@@ -115,11 +114,10 @@
   font-size: 1.75rem;
   font-weight: 600;
   transition: all 0.3s;
-
-  &:hover {
-    background: #8fb743;
-    transform: translateY(-3px);
-  }
+}
+.contactBtn:hover {
+  background: #8fb743;
+  transform: translateY(-3px);
 }
 
 /* Lợi ích */
@@ -141,7 +139,7 @@
   padding: 1.8rem 2rem;
   border-radius: 12px;
   font-size: 1.75rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* Responsive */

@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100%;
+  min-height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+}

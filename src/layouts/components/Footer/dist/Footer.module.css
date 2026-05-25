@@ -18,13 +18,11 @@
   margin-bottom: 60px;
 }
 
-.footerCol {
-  h3 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
+.footerCol h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .footerLogo img {
@@ -43,41 +41,34 @@
 .footerLinks {
   list-style: none;
   padding: 0;
-
-  li {
-    margin-bottom: 1.2rem;
-
-    a {
-      color: #ddd;
-      text-decoration: none;
-      font-size: 1.65rem;
-      transition: all 0.3s;
-
-      &:hover {
-        color: var(--primary);
-        padding-left: 6px;
-      }
-    }
-  }
+}
+.footerLinks li {
+  margin-bottom: 1.2rem;
+}
+.footerLinks li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.65rem;
+  transition: all 0.3s;
+}
+.footerLinks li a:hover {
+  color: var(--primary);
+  padding-left: 6px;
 }
 
 /* Contact Info */
-.contactInfo {
-  p {
-    margin-bottom: 1.4rem;
-    font-size: 1.6rem;
-    line-height: 1.7;
-  }
-
-  a {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--primary);
-    }
-  }
+.contactInfo p {
+  margin-bottom: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+.contactInfo a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contactInfo a:hover {
+  color: var(--primary);
 }
 
 /* Bottom Bar */
@@ -104,7 +95,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 768px) {
   .footer {
     padding-top: 60px;
