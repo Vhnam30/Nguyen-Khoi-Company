@@ -39,7 +39,7 @@ function ServicesPage() {
           src={serviceBanner}
           alt="Banner Dịch vụ Bơm Bê Tông Nguyên Khôi"
           className={styles.bannerImage}
-          loading="eager" // Banner đầu trang thì eager
+          loading="eager"
           fetchPriority="high"
         />
 

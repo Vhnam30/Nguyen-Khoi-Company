@@ -180,6 +180,8 @@ function ProductPage() {
           src={productBanner}
           alt="Banner Sản phẩm Nguyên Khôi"
           className={styles.bannerImage}
+          loading="eager"
+          fetchPriority="high"
         />
 
         <div className={styles.bannerOverlay}></div>
