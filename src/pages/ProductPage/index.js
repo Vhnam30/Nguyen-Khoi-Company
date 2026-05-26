@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./ProductPage.module.scss";
 import productImg from "../../assets/img/product/index.js";
 import { productBanner } from "../../assets/img/pageBanner/index.js";
+
 const products = [
   // BÊ TÔNG THƯƠNG PHẨM
   { id: 1, category: "betong", name: "Bê tông M100", spec: "Đá 1×2, độ sụt 12±2", type: "R8", desc: "Dùng cho nền đường, lót móng" },
@@ -86,10 +87,13 @@ function ProductPage() {
 
         {/* Product Grid */}
         <div className={styles.productGrid}>
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product, index) => (
             <div key={product.id} className={styles.productCard}>
               <div className={styles.productImage}>
-                <img src={productImg[product.id - 1]} alt={product.name} />
+                <img 
+                  src={productImg[index]} 
+                  alt={product.name} 
+                />
               </div>
               <div className={styles.productInfo}>
                 <h3>{product.name}</h3>
