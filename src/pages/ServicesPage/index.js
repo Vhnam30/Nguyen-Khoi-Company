@@ -35,12 +35,14 @@ function ServicesPage() {
     <>
       {/* Banner Dịch Vụ */}
       <section className={styles.serviceBanner}>
-        <img 
-          src={serviceBanner} 
-          alt="Banner Dịch vụ Bơm Bê Tông Nguyên Khôi" 
+        <img
+          src={serviceBanner}
+          alt="Banner Dịch vụ Bơm Bê Tông Nguyên Khôi"
           className={styles.bannerImage}
+          loading="eager" // Banner đầu trang thì eager
+          fetchPriority="high"
         />
-        
+
         <div className={styles.bannerOverlay}></div>
 
         <div className={styles.bannerContent}>
@@ -56,8 +58,8 @@ function ServicesPage() {
             Dịch Vụ Bơm Bê Tông Chuyên Nghiệp
           </h2>
           <p>
-            Chúng tôi cung cấp dịch vụ bơm bê tông bằng xe bơm cần với nhiều tầm 
-            vươn khác nhau, đáp ứng mọi nhu cầu từ công trình nhỏ đến lớn. Thiết 
+            Chúng tôi cung cấp dịch vụ bơm bê tông bằng xe bơm cần với nhiều tầm
+            vươn khác nhau, đáp ứng mọi nhu cầu từ công trình nhỏ đến lớn. Thiết
             bị hiện đại, đội ngũ kỹ thuật giàu kinh nghiệm.
           </p>
         </section>
@@ -86,10 +88,12 @@ function ServicesPage() {
           </h2>
           <div className={styles.benefitsGrid}>
             <div className={styles.benefitItem}>
-              <FontAwesomeIcon icon={faCheck} /> Thiết bị hiện đại, bảo dưỡng định kỳ
+              <FontAwesomeIcon icon={faCheck} /> Thiết bị hiện đại, bảo dưỡng
+              định kỳ
             </div>
             <div className={styles.benefitItem}>
-              <FontAwesomeIcon icon={faCheck} /> Đội ngũ vận hành giàu kinh nghiệm
+              <FontAwesomeIcon icon={faCheck} /> Đội ngũ vận hành giàu kinh
+              nghiệm
             </div>
             <div className={styles.benefitItem}>
               <FontAwesomeIcon icon={faCheck} /> Bơm chính xác, ít hao hụt
