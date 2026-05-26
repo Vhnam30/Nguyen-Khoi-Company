@@ -32,9 +32,7 @@ function Footer() {
               <li>
                 <Link to={routes.services}>Dịch vụ</Link>
               </li>
-              <li>
-                <Link to={routes.project}>Dự án nổi bật</Link>
-              </li>
+
               <li>
                 <Link to={routes.aboutus}>Về chúng tôi</Link>
               </li>
@@ -56,7 +54,8 @@ function Footer() {
             <h3 className={styles.footerTitle}>Liên hệ với chúng tôi</h3>
             <div className={styles.contactInfo}>
               <p>
-                <strong>Địa chỉ:</strong> Lô C20A KCN Hòa Bình, phường Đăk Bla, tỉnh Quảng Ngãi
+                <strong>Địa chỉ:</strong> Lô C20A KCN Hòa Bình, phường Đăk Bla,
+                tỉnh Quảng Ngãi
               </p>
               <p>
                 <strong>Hotline:</strong>{" "}

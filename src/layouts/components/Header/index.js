@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import routes from "../../../config/routes";
 import styles from "./Header.module.scss";
 import { logo } from "../../../assets/img/logo/index.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,14 +29,14 @@ function Header() {
   ];
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.header__container}>
         {/* Logo */}
         <div className={styles.header__logo}>
           <Link to={routes.home}>
-            <img 
-              src={logo} 
-              alt="Nguyễn Khôi Company" 
+            <img
+              src={logo}
+              alt="Nguyễn Khôi Company"
               className={styles.header__logoImg}
             />
           </Link>
@@ -56,13 +58,13 @@ function Header() {
         {/* Hotline Button */}
         <div className={styles.header__action}>
           <a href="tel:0941770995" className={styles.header__btn}>
-            📞 0941.770.995
+            <FontAwesomeIcon icon={faPhone} /> 0941.770.995
           </a>
         </div>
 
         {/* Hamburger Menu */}
-        <button 
-          className={`${styles.header__hamburger} ${isMenuOpen ? styles.active : ''}`}
+        <button
+          className={`${styles.header__hamburger} ${isMenuOpen ? styles.active : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -72,12 +74,14 @@ function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${styles.header__mobileMenu} ${isMenuOpen ? styles.active : ''}`}>
+      <div
+        className={`${styles.header__mobileMenu} ${isMenuOpen ? styles.active : ""}`}
+      >
         <ul className={styles.header__mobileList}>
           {navItems.map((item, index) => (
             <li key={index} className={styles.header__mobileItem}>
-              <Link 
-                to={item.path} 
+              <Link
+                to={item.path}
                 onClick={() => setIsMenuOpen(false)}
                 className={styles.header__mobileLink}
               >
@@ -86,12 +90,12 @@ function Header() {
             </li>
           ))}
           <li>
-            <a 
+            <a
               href="tel:0941770995"
               onClick={() => setIsMenuOpen(false)}
               className={styles.header__mobileBtn}
             >
-              📞 Gọi ngay: 0941.770.995
+              <FontAwesomeIcon icon={faPhone} /> Gọi ngay: 0941.770.995
             </a>
           </li>
         </ul>

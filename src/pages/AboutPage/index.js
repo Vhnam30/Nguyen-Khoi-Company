@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
 import styles from "./AboutPage.module.scss";
-
+import { aboutBanner } from "../../assets/img/pageBanner/index.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function AboutPage() {
   return (
     <>
- 
-
-      {/* Banner */}
+      {/* Banner About */}
       <section className={styles.aboutBanner}>
+        <img
+          src={aboutBanner}
+          alt="Về Nguyên Khôi Company"
+          className={styles.bannerImage}
+        />
+
+        <div className={styles.bannerOverlay}></div>
+
         <div className={styles.bannerContent}>
           <h1>Về Nguyên Khôi Company</h1>
           <p>Uy tín - Chất lượng - Đồng hành cùng công trình</p>
@@ -20,13 +28,16 @@ function AboutPage() {
         <section className={styles.intro}>
           <h2 className={styles.sectionTitle}>Chúng Tôi Là Ai?</h2>
           <p>
-            Thành lập từ năm 2016 tại Kon Tum, <strong>Nguyên Khôi Company</strong> 
-             tự hào là một trong những nhà cung cấp vật liệu xây dựng uy tín hàng đầu tại khu vực Tây Nguyên.
+            Thành lập từ năm 2016 tại Kon Tum,{" "}
+            <strong>Nguyên Khôi Company</strong>
+            tự hào là một trong những nhà cung cấp vật liệu xây dựng uy tín hàng
+            đầu tại khu vực Tây Nguyên.
           </p>
           <p>
-            Với hơn 9 năm kinh nghiệm trong ngành, chúng tôi chuyên cung cấp các sản phẩm bê tông thương phẩm, 
-            gạch không nung, đá xây dựng và dịch vụ bơm bê tông chuyên nghiệp. Chúng tôi cam kết mang đến cho khách hàng 
-            những sản phẩm chất lượng cao với giá cả cạnh tranh nhất.
+            Với hơn 9 năm kinh nghiệm trong ngành, chúng tôi chuyên cung cấp các
+            sản phẩm bê tông thương phẩm, gạch không nung, đá xây dựng và dịch
+            vụ bơm bê tông chuyên nghiệp. Chúng tôi cam kết mang đến cho khách
+            hàng những sản phẩm chất lượng cao với giá cả cạnh tranh nhất.
           </p>
         </section>
 
@@ -35,11 +46,17 @@ function AboutPage() {
           <div className={styles.missionGrid}>
             <div className={styles.missionCard}>
               <h3>Sứ Mệnh</h3>
-              <p>Cung cấp vật liệu xây dựng chất lượng cao, góp phần tạo nên những công trình bền vững, an toàn và hiện đại cho cộng đồng.</p>
+              <p>
+                Cung cấp vật liệu xây dựng chất lượng cao, góp phần tạo nên
+                những công trình bền vững, an toàn và hiện đại cho cộng đồng.
+              </p>
             </div>
             <div className={styles.missionCard}>
               <h3>Tầm Nhìn</h3>
-              <p>Trở thành doanh nghiệp hàng đầu về vật liệu xây dựng tại Tây Nguyên.</p>
+              <p>
+                Trở thành doanh nghiệp hàng đầu về vật liệu xây dựng tại Tây
+                Nguyên.
+              </p>
             </div>
           </div>
         </section>
@@ -48,10 +65,19 @@ function AboutPage() {
         <section className={styles.values}>
           <h2 className={styles.sectionTitle}>Giá Trị Cốt Lõi</h2>
           <div className={styles.valuesGrid}>
-            <div className={styles.valueItem}>✅ <strong>Chất Lượng</strong> - Sản phẩm chất lượng, đạt tiêu chuẩn</div>
-            <div className={styles.valueItem}>✅ <strong>Uy Tín</strong> - Minh bạch, đúng cam kết</div>
-            <div className={styles.valueItem}>✅ <strong>Tiết Kiệm</strong> - Giá cả cạnh tranh, tối ưu chi phí</div>
-            <div className={styles.valueItem}>✅ <strong>Chuyên Nghiệp</strong> - Dịch vụ nhanh chóng, tận tâm</div>
+            <div className={styles.valueItem}>
+                <FontAwesomeIcon icon={faCheck} /> <strong>Chất Lượng</strong> - Sản phẩm chất lượng, đạt tiêu
+              chuẩn
+            </div>
+            <div className={styles.valueItem}>
+              <FontAwesomeIcon icon={faCheck} /> <strong>Uy Tín</strong> - Minh bạch, đúng cam kết
+            </div>
+            <div className={styles.valueItem}>
+              <FontAwesomeIcon icon={faCheck} /> <strong>Tiết Kiệm</strong> - Giá cả cạnh tranh, tối ưu chi phí
+            </div>
+            <div className={styles.valueItem}>
+              <FontAwesomeIcon icon={faCheck} /> <strong>Chuyên Nghiệp</strong> - Dịch vụ nhanh chóng, tận tâm
+            </div>
           </div>
         </section>
 
@@ -87,8 +113,6 @@ function AboutPage() {
           </Link>
         </section>
       </div>
-
-  
     </>
   );
 }

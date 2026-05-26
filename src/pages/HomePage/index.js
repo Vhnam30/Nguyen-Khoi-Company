@@ -4,6 +4,8 @@ import styles from "./HomePage.module.scss";
 import bannerImg from "../../assets/img/banner/index.js";
 import productImg from "../../assets/img/product/index.js";
 import projectImg from "../../assets/img/project/index.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 const bannerSlides = [
   {
     id: 1,
@@ -190,13 +192,13 @@ function HomePage() {
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Tại Sao Nên Chọn Nguyên Khôi?</h2>
           <div className={styles.whyGrid}>
-            <div className={styles.whyItem}>✅ Sản phẩm chất lượng 100%</div>
-            <div className={styles.whyItem}>✅ Giá cả cạnh tranh</div>
-            <div className={styles.whyItem}>✅ Giao hàng nhanh</div>
-            <div className={styles.whyItem}>✅ Bảo hành dài hạn</div>
-            <div className={styles.whyItem}>✅ Đội ngũ tư vấn chuyên sâu</div>
+            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Sản phẩm chất lượng 100%</div>
+            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Giá cả cạnh tranh</div>
+            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Giao hàng nhanh</div>
+            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Bảo hành dài hạn</div>
+            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Đội ngũ tư vấn chuyên sâu</div>
             <div className={styles.whyItem}>
-              ✅ Hàng ngàn khách hàng hài lòng
+              <FontAwesomeIcon icon={faCheck} /> Hàng ngàn khách hàng hài lòng
             </div>
           </div>
         </div>

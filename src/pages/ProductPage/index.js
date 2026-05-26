@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProductPage.module.scss";
 import productImg from "../../assets/img/product/index.js";
-
-
+import { productBanner } from "../../assets/img/pageBanner/index.js";
 const products = [
   // BÊ TÔNG THƯƠNG PHẨM
   { id: 1, category: "betong", name: "Bê tông M100", spec: "Đá 1×2, độ sụt 12±2", type: "R8", desc: "Dùng cho nền đường, lót móng" },
@@ -40,10 +39,16 @@ function ProductPage() {
 
   return (
     <>
-   
-
       {/* Banner Trang Sản Phẩm */}
       <section className={styles.productBanner}>
+        <img 
+          src={productBanner} 
+          alt="Banner Sản phẩm Nguyên Khôi" 
+          className={styles.bannerImage}
+        />
+        
+        <div className={styles.bannerOverlay}></div>
+
         <div className={styles.bannerContent}>
           <h1>Sản Phẩm</h1>
           <p>Chất lượng cao - Giá cả cạnh tranh - Giao hàng nhanh chóng</p>
@@ -81,10 +86,10 @@ function ProductPage() {
 
         {/* Product Grid */}
         <div className={styles.productGrid}>
-          {filteredProducts.map((product, i) => (
+          {filteredProducts.map((product) => (
             <div key={product.id} className={styles.productCard}>
               <div className={styles.productImage}>
-                <img src={productImg[i]} alt={product.name} />
+                <img src={productImg[product.id - 1]} alt={product.name} />
               </div>
               <div className={styles.productInfo}>
                 <h3>{product.name}</h3>
@@ -100,8 +105,6 @@ function ProductPage() {
           ))}
         </div>
       </div>
-
-  
     </>
   );
 }

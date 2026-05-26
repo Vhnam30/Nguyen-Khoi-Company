@@ -1,9 +1,7 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./ContactPage.module.scss";
-
-
-
+import {contactBanner} from "../../assets/img/pageBanner/index.js";
 function ContactPage() {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
@@ -15,10 +13,10 @@ function ContactPage() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",      // ← Thay bằng Service ID của bạn
-        "YOUR_TEMPLATE_ID",     // ← Thay bằng Template ID của bạn
+        "service_hfqklec",      
+        "template_hnwazhk",     
         form.current,
-        "YOUR_PUBLIC_KEY"       // ← Thay bằng Public Key của bạn
+        "nkBGhwWozcQd9kbub"       
       )
       .then(
         () => {
@@ -35,10 +33,16 @@ function ContactPage() {
 
   return (
     <>
-
-
       {/* Banner Liên Hệ */}
       <section className={styles.contactBanner}>
+        <img 
+          src={contactBanner} 
+          alt="Liên hệ Nguyên Khôi Company" 
+          className={styles.bannerImage}
+        />
+        
+        <div className={styles.bannerOverlay}></div>
+
         <div className={styles.bannerContent}>
           <h1>Liên Hệ Với Chúng Tôi</h1>
           <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7</p>
@@ -120,8 +124,6 @@ function ContactPage() {
           </div>
         </div>
       </div>
-
-
     </>
   );
 }
