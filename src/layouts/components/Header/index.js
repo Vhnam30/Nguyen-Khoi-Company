@@ -23,7 +23,8 @@ function Header() {
     { title: "Trang chủ", path: routes.home },
     { title: "Sản phẩm", path: routes.product },
     { title: "Dịch vụ", path: routes.services },
-    // { title: "Dự án nổi bật", path: routes.project },
+    { title: "Hình ảnh nhà máy", path: routes.mediaGallery },
+
     { title: "Về chúng tôi", path: routes.aboutus },
     { title: "Liên hệ", path: routes.contact },
   ];

@@ -17,9 +17,10 @@ var _index4 = _interopRequireDefault(require("../pages/AboutPage/index.js"));
 
 var _index5 = _interopRequireDefault(require("../pages/ServicesPage/index.js"));
 
+var _index6 = _interopRequireDefault(require("../pages/MediaGalleryPage/index.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// import ProjectPage from '../pages/ProjectPage/index.js';
 var publicRoutes = [{
   path: _config["default"].routes.home,
   component: _index["default"]
@@ -35,6 +36,8 @@ var publicRoutes = [{
 }, {
   path: _config["default"].routes.services,
   component: _index5["default"]
-} // {path: config.routes.project, component: ProjectPage}
-];
+}, {
+  path: _config["default"].routes.mediaGallery,
+  component: _index6["default"]
+}];
 exports.publicRoutes = publicRoutes;
