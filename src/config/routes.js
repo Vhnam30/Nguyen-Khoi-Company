@@ -5,7 +5,8 @@ const routes = {
   aboutus: "/ve-chung-toi",
   mediaGallery: "/hinh-anh-nha-may",
   services: "/dich-vu",
+  blogKhongNung: "/gach-khong-nung-kon-tum",
+  blogTerazo: "/gach-terazo-kon-tum",
 };
 
 export default routes;
-

@@ -29,27 +29,7 @@ const MediaGalleryPage = () => {
     },
     { id: 3, type: "image", src: vanChuyenVatLieu, title: "Vận chuyển gạch" },
 
-    {
-      id: 4,
-      type: "video",
-      src: toanCanhNhaMay,
-      poster: hinhAnhNhaMay,
-      title: "Toàn cảnh nhà máy",
-    },
-    {
-      id: 5,
-      type: "video",
-      src: quyTrinhEpGach,
-      poster: hinhAnhNhaMay,
-      title: "Quy trình ép gạch",
-    },
-    {
-      id: 6,
-      type: "video",
-      src: quyTrinhXepGach,
-      poster: hinhAnhNhaMay,
-      title: "Quy trình xếp gạch",
-    },
+   
   ];
 
   const filteredMedia = mediaList.filter((item) => {
@@ -108,43 +88,7 @@ const MediaGalleryPage = () => {
         </button>
       </div>
 
-      {/* Media Grid */}
-      {/* <div className={styles.mediaGrid}>
-        {filteredMedia.map((media, index) => (
-          <div
-            key={media.id}
-            className={styles.mediaItem}
-            onClick={() => openModal(media, index)}
-          >
-            <div className={styles.mediaContent}>
-              {media.type === "image" ? (
-                <img
-                  src={
-                    media.src ||
-                    "https://via.placeholder.com/600x400?text=Image"
-                  }
-                  alt={media.title}
-                />
-              ) : (
-                <div className={styles.videoThumbnail}>
-                  <img
-                    src={
-                      media.src ||
-                      "https://via.placeholder.com/600x400?text=Video"
-                    }
-                    alt={media.title}
-                    poster={media.poster}
-                  />
-                  <div className={styles.playIcon}>▶</div>
-                </div>
-              )}
-            </div>
-            <div className={styles.mediaInfo}>
-              <h3>{media.title}</h3>
-            </div>
-          </div>
-        ))}
-      </div> */}
+      
 
       {/* Media Grid */}
       <div className={styles.mediaGrid}>

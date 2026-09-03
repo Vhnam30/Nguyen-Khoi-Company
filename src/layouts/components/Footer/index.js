@@ -73,13 +73,7 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className={styles.footerBottom}>
-          <p>© 2026 Nguyễn Khôi Company. All Rights Reserved.</p>
-          <p>
-            Thiết kế website bởi{" "}
-            <span className={styles.highlight}>Nam Dev</span>
-          </p>
-        </div>
+       
       </div>
     </footer>
   );

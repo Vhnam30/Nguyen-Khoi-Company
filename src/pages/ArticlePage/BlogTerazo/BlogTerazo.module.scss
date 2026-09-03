@@ -1,0 +1,355 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ==================== BANNER ==================== */
+.banner {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+
+  .bannerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+
+  .bannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.65), 
+      rgba(0, 0, 0, 0.65)
+    );
+    z-index: 2;
+  }
+
+  .bannerContent {
+    position: relative;
+    z-index: 3;
+    padding: 0 2rem;
+
+    h1 {
+      font-size: 4.8rem;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      font-size: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* ==================== ARTICLE CONTENT ==================== */
+.article {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  color: var(--text-color);
+  font-size: 1.7rem;
+  line-height: 1.8;
+
+  .lead {
+    font-size: 1.9rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    color: #222;
+    margin-top: 4rem;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid var(--primary);
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #444;
+  }
+}
+
+/* ==================== CHECKLIST ==================== */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 3rem 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+
+    .iconCheck {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* ==================== CTA BOX ==================== */
+.ctaBox {
+  background: linear-gradient(135deg, #f9fbf7 0%, #eef6e4 100%);
+  border-left: 5px solid var(--primary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3.5rem 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+  .ctaInfo {
+    h3 {
+      font-size: 2.2rem;
+      color: #111;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      svg {
+        color: var(--primary);
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #555;
+    }
+  }
+
+  .ctaBtn {
+    background: var(--primary);
+    color: white;
+    padding: 1.4rem 2.8rem;
+    border-radius: 50px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(165, 207, 81, 0.3);
+
+    &:hover {
+      background: #8fb743;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+/* ==================== TABLE ==================== */
+.tableWrapper {
+  overflow-x: auto;
+  margin: 3rem 0;
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+  th, td {
+    padding: 1.6rem;
+    text-align: left;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  th {
+    background: var(--primary);
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+}
+
+/* ==================== HIGHLIGHT NOTE ==================== */
+.highlightNote {
+  background: #fff8eb;
+  border: 1px solid #ffe8cc;
+  border-radius: 10px;
+  padding: 2.2rem;
+  margin: 3rem 0;
+
+  h4 {
+    color: #d97706;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.65rem;
+    line-height: 1.8;
+    color: #4b5563;
+  }
+}
+
+/* ==================== CONTACT CARD ==================== */
+.contactCard {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 3rem;
+  margin-top: 4rem;
+  box-shadow: 0 10px 30px rgba(165, 207, 81, 0.15);
+
+  h3 {
+    font-size: 2.4rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+      color: var(--primary);
+      width: 20px;
+    }
+
+    a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .actionBtns {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+
+    .primaryBtn, .secondaryBtn {
+      flex: 1;
+      padding: 1.4rem;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .primaryBtn {
+      background: var(--primary);
+      color: white;
+
+      &:hover {
+        background: #8fb743;
+        transform: translateY(-2px);
+      }
+    }
+
+    .secondaryBtn {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+
+      &:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .banner {
+    height: 320px;
+
+    .bannerContent h1 {
+      font-size: 3.6rem;
+    }
+
+    .bannerContent p {
+      font-size: 1.7rem;
+    }
+  }
+
+  .article {
+    font-size: 1.6rem;
+
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .ctaBox {
+    flex-direction: column;
+    text-align: center;
+
+    .ctaInfo h3 {
+      justify-content: center;
+    }
+
+    .ctaBtn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .contactCard {
+    padding: 2rem;
+
+    .actionBtns {
+      flex-direction: column;
+    }
+  }
+}
