@@ -4,9 +4,7 @@ import {
   hinhAnhNhaMay,
   hinhAnhBomBeTong,
   vanChuyenVatLieu,
-  toanCanhNhaMay,
-  quyTrinhEpGach,
-  quyTrinhXepGach,
+ 
 } from "../../assets/img/media/index.js";
 const MediaGalleryPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");

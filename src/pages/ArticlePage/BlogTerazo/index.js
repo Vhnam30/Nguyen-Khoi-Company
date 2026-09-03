@@ -9,7 +9,7 @@ import {
   faMapMarkerAlt,
   faBuilding,
   faShieldAlt,
-  faLayerGroup,
+
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
 
