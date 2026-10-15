@@ -18,8 +18,15 @@ const productImg = [
   require("./product-auto.jpg"),
   require("./product-auto.jpg"),
   require("./product-auto.jpg"),
-
- 
 ];
 
+const productImage = {
+  gach6lo: require("./6lo1.jpg"),
+  loka: require("./loka.jpg"),
+  gachthe: require("./gach-the.jpg"),
+  khongnung: require("./khongnung.jpg"),
+  betong: require("./betong.jpg"),
+};
+
 export default productImg;
+export { productImage };

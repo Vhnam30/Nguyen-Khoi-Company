@@ -87,13 +87,13 @@ function HomePage() {
         <div className={styles.container}>
           <div className={styles.aboutContent}>
             <div className={styles.aboutText}>
-              <h2 className={styles.sectionTitle}>Về Nguyên Khôi Company</h2>
+              <h2 className={styles.sectionTitle}>Về VLXD Nguyên Khôi </h2>
               <p>
-                Thành lập từ năm 2016, <strong>Nguyên Khôi Company</strong> tự
-                hào là một trong những nhà cung cấp vật liệu xây dựng hàng đầu
-                tại Tây Nguyên. Chúng tôi chuyên cung cấp đầy đủ các loại vật
-                liệu từ thô đến tinh, phục vụ cho mọi loại công trình từ dân
-                dụng đến công nghiệp.
+                Thành lập từ năm 2016, <strong>VLXD Nguyên Khôi</strong> tự hào
+                là một trong những nhà cung cấp vật liệu xây dựng hàng đầu tại
+                Tây Nguyên. Chúng tôi chuyên cung cấp đầy đủ các loại vật liệu
+                từ thô đến tinh, phục vụ cho mọi loại công trình từ dân dụng đến
+                công nghiệp.
               </p>
               <p>
                 Với phương châm{" "}
@@ -166,37 +166,47 @@ function HomePage() {
         </div>
       </section>
 
-    <section className={styles.projects}>
-  <div className={styles.container}>
-    <h2 className={styles.sectionTitle}>Dự Án Nổi Bật</h2>
-    <div className={styles.projectGrid}>
-      {[1, 2, 3].map((i) => (
-        <div key={i} className={styles.projectCard}>
-          <img 
-            src={projectImg[i - 1]} 
-            alt={`Dự án ${i}`} 
-            className={styles.projectImage}
-          />
-          <div className={styles.projectOverlay}>
-            <h4>Dự án {i}</h4>
-            <p>Khách sạn / Chung cư / Nhà máy</p>
+      <section className={styles.projects}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Dự Án Nổi Bật</h2>
+          <div className={styles.projectGrid}>
+            {[1, 2, 3].map((i) => (
+              <div key={i} className={styles.projectCard}>
+                <img
+                  src={projectImg[i - 1]}
+                  alt={`Dự án ${i}`}
+                  className={styles.projectImage}
+                />
+                <div className={styles.projectOverlay}>
+                  <h4>Dự án {i}</h4>
+                  <p>Khách sạn / Chung cư / Nhà máy</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* LÝ DO CHỌN CHÚNG TÔI */}
       <section className={styles.whyUs}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Tại Sao Nên Chọn Nguyên Khôi?</h2>
           <div className={styles.whyGrid}>
-            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Sản phẩm chất lượng 100%</div>
-            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Giá cả cạnh tranh</div>
-            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Giao hàng nhanh</div>
-            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Bảo hành dài hạn</div>
-            <div className={styles.whyItem}><FontAwesomeIcon icon={faCheck} /> Đội ngũ tư vấn chuyên sâu</div>
+            <div className={styles.whyItem}>
+              <FontAwesomeIcon icon={faCheck} /> Sản phẩm chất lượng 100%
+            </div>
+            <div className={styles.whyItem}>
+              <FontAwesomeIcon icon={faCheck} /> Giá cả cạnh tranh
+            </div>
+            <div className={styles.whyItem}>
+              <FontAwesomeIcon icon={faCheck} /> Giao hàng nhanh
+            </div>
+            <div className={styles.whyItem}>
+              <FontAwesomeIcon icon={faCheck} /> Bảo hành dài hạn
+            </div>
+            <div className={styles.whyItem}>
+              <FontAwesomeIcon icon={faCheck} /> Đội ngũ tư vấn chuyên sâu
+            </div>
             <div className={styles.whyItem}>
               <FontAwesomeIcon icon={faCheck} /> Hàng ngàn khách hàng hài lòng
             </div>

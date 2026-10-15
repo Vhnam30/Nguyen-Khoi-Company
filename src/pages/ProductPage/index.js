@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProductPage.module.scss";
-import productImg from "../../assets/img/product/index.js";
+import productImg, { productImage } from "../../assets/img/product/index.js";
 import { productBanner } from "../../assets/img/pageBanner/index.js";
 
 const products = [
@@ -13,6 +13,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R8",
     desc: "Dùng cho nền đường, lót móng",
+    image: productImage.betong,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Dùng cho sàn, dầm, cột",
+    image: productImage.betong,
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Phổ biến cho nhà dân dụng",
+    image: productImage.betong,
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Công trình yêu cầu cường độ cao",
+    image: productImage.betong,
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Dùng cho sàn chịu lực lớn",
+    image: productImage.betong,
   },
   {
     id: 6,
@@ -53,6 +58,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Công trình cao tầng, cầu đường",
+    image: productImage.betong,
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const products = [
     spec: "Đá 1×2, độ sụt 12±2",
     type: "R7 & R8",
     desc: "Công trình đặc biệt cao cấp",
+    image: productImage.betong,
   },
 
   // GẠCH KHÔNG NUNG
@@ -71,6 +78,7 @@ const products = [
     spec: "200×130×85 mm",
     type: "Không nung",
     desc: "Cách nhiệt, cách âm tốt",
+    image: productImage.gach6lo,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const products = [
     spec: "200×100×50 mm",
     type: "Không nung",
     desc: "Ốp tường, lát nền",
+    image: productImage.khongnung,
   },
   {
     id: 10,
@@ -87,6 +96,7 @@ const products = [
     spec: "260×170×120 mm",
     type: "Không nung",
     desc: "Tường chịu lực",
+    image: productImage.gachthe,
   },
 
   // ĐÁ XÂY DỰNG
@@ -97,6 +107,7 @@ const products = [
     spec: "Đá sạch",
     type: "Đá dăm",
     desc: "Bê tông, nền đường",
+    image: productImage.loka,
   },
   {
     id: 12,
@@ -105,6 +116,7 @@ const products = [
     spec: "Đá sạch",
     type: "Đá dăm",
     desc: "Bê tông chất lượng cao",
+    image: productImage.loka,
   },
   {
     id: 13,
@@ -113,6 +125,7 @@ const products = [
     spec: "",
     type: "Đá dăm",
     desc: "Nền móng, thoát nước",
+    image: productImage.loka,
   },
   {
     id: 14,
@@ -121,6 +134,7 @@ const products = [
     spec: "",
     type: "Đá mạt",
     desc: "Lót nền, san lấp",
+    image: productImage.loka,
   },
   {
     id: 15,
@@ -129,6 +143,7 @@ const products = [
     spec: "",
     type: "Đá lớn",
     desc: "Móng nhà, kè sông",
+    image: productImage.loka,
   },
   {
     id: 16,
@@ -137,6 +152,7 @@ const products = [
     spec: "",
     type: "Cấp phối",
     desc: "Nền đường, sân",
+    image: productImage.loka,
   },
   {
     id: 17,
@@ -145,6 +161,7 @@ const products = [
     spec: "",
     type: "Cấp phối",
     desc: "Nền đường giao thông",
+    image: productImage.loka,
   },
   {
     id: 18,
@@ -153,6 +170,7 @@ const products = [
     spec: "",
     type: "Đá loka",
     desc: "Móng nhà, công trình",
+    image: productImage.loka,
   },
   {
     id: 19,
@@ -161,6 +179,7 @@ const products = [
     spec: "",
     type: "Đá loka",
     desc: "Công trình lớn",
+    image: productImage.loka,
   },
 ];
 
@@ -227,7 +246,7 @@ function ProductPage() {
             <div key={product.id} className={styles.productCard}>
               <div className={styles.productImage}>
                 <img
-                  src={productImg[index]}
+                  src={product.image}
                   alt={product.name}
                   loading="lazy" // Rất quan trọng
                   decoding="async"
