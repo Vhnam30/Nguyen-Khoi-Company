@@ -2,42 +2,69 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./HomePage.module.scss";
 import bannerImg from "../../assets/img/banner/index.js";
-import productImg from "../../assets/img/product/index.js";
-import projectImg from "../../assets/img/project/index.js";
+import productImage from "../../assets/img/product/index.js";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+// Cấu hình các slide banner (sửa lại để không bị khai báo trùng lặp thuộc tính image)
 const bannerSlides = [
   {
     id: 1,
-    image: bannerImg[0],
+    image: productImage.betong,
+    bannerBg: bannerImg[0],
     title: "Vật Liệu Xây Dựng Chất Lượng Cao",
     subtitle: "Đồng hành cùng mọi công trình bền vững",
   },
   {
     id: 2,
-    image: bannerImg[1],
+    image: productImage.loka,
+    bannerBg: bannerImg[1],
     title: "Giải Pháp Vật Liệu Toàn Diện",
     subtitle: "Từ nền móng vững chắc đến mái nhà hoàn hảo",
   },
   {
     id: 3,
-    image: bannerImg[2],
+    image: productImage.gach6lo,
+    bannerBg: bannerImg[2],
     title: "Uy Tín - Chất Lượng - Tiết Kiệm",
-    subtitle: "Hơn 10 năm kinh nghiệm phục vụ khách hàng",
+    subtitle: "Giải pháp tối ưu cho mọi công trình",
   },
   {
     id: 4,
-    image: bannerImg[3],
+    image: productImage.betong,
+    bannerBg: bannerImg[3],
     title: "Xây Dựng Tương Lai Cùng Nguyên Khôi",
     subtitle: "Sản phẩm chất lượng - Giá cả cạnh tranh nhất",
   },
 ];
 
-const productName = [
-  "Bê tông thương phẩm",
-  "Đá xây dựng",
-  "Gạch các loại",
-  "Đổ bê tông",
+// Danh sách sản phẩm nổi bật khớp với 4 phần tử phía trên
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Bê tông thương phẩm",
+    image: productImage.betong,
+    desc: "Chất lượng cao, cường độ chịu lực tốt cho mọi công trình.",
+  },
+  {
+    id: 2,
+    name: "Đá xây dựng",
+    image: productImage.loka,
+    desc: "Đá dăm, đá loka đạt chuẩn, sạch sẽ, phục vụ san lấp và đổ bê tông.",
+  },
+  {
+    id: 3,
+    name: "Gạch các loại",
+    image: productImage.gach6lo,
+    desc: "Gạch không nung cách âm, cách nhiệt, độ bền vượt trội.",
+  },
+  {
+    id: 4,
+    name: "Dịch vụ đổ bê tông",
+    image: productImage.betong,
+    desc: "Cung cấp và bơm đổ bê tông tươi trọn gói, nhanh chóng.",
+  },
 ];
 
 function HomePage() {
@@ -58,7 +85,7 @@ function HomePage() {
           <div
             key={slide.id}
             className={`${styles.slide} ${index === currentSlide ? styles.active : ""}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ backgroundImage: `url(${slide.bannerBg})` }}
           >
             <div className={styles.overlay}></div>
             <div className={styles.bannerContent}>
@@ -121,18 +148,18 @@ function HomePage() {
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Sản Phẩm Nổi Bật</h2>
           <div className={styles.productGrid}>
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className={styles.productCard}>
+            {featuredProducts.map((product) => (
+              <div key={product.id} className={styles.productCard}>
                 <div className={styles.productImg}>
                   <img
-                    src={productImg[i - 1]}
-                    alt="Sản phẩm"
+                    src={product.image}
+                    alt={product.name}
                     className={styles.productImage}
                   />
                 </div>
                 <div className={styles.productInfo}>
-                  <h3>{productName[i - 1]}</h3>
-                  <p>Chất lượng cao, giá tốt nhất thị trường</p>
+                  <h3>{product.name}</h3>
+                  <p>{product.desc}</p>
                   <Link to="/san-pham" className={styles.productLink}>
                     Xem chi tiết →
                   </Link>
@@ -166,6 +193,7 @@ function HomePage() {
         </div>
       </section>
 
+      {/* DỰ ÁN */}
       <section className={styles.projects}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Dự Án Nổi Bật</h2>
@@ -173,7 +201,7 @@ function HomePage() {
             {[1, 2, 3].map((i) => (
               <div key={i} className={styles.projectCard}>
                 <img
-                  src={projectImg[i - 1]}
+                  src={bannerImg[i - 1]}
                   alt={`Dự án ${i}`}
                   className={styles.projectImage}
                 />
