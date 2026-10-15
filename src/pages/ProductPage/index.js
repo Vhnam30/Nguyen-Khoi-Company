@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProductPage.module.scss";
-import { productImage } from "../../assets/img/product/index.js";
+import productImage from "../../assets/img/product/index.js";
 import { productBanner } from "../../assets/img/pageBanner/index.js";
 
 const products = [

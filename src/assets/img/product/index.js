@@ -6,4 +6,4 @@ const productImage = {
   betong: require("./betong.jpg"),
 };
 
-export { productImage };
+export default productImage;
